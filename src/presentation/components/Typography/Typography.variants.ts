@@ -1,28 +1,31 @@
 import { css } from 'styled-components';
 
-export const typography = {
-  headerTitle: css`
+export const typographyVariants = {
+  xxl: css`
     font-size: var(--mvl-font-size-2xl);
     font-weight: var(--mvl-font-weight-bold);
+    line-height: 1.1;
   `,
-  characterName: css`
+  xl: css`
     font-size: var(--mvl-font-size-xl);
     font-weight: var(--mvl-font-weight-bold);
+    line-height: 1.3;
   `,
-  sectionTitle: css`
-    font-size: var(--mvl-font-size-lg);
-    font-weight: var(--mvl-font-weight-bold);
-  `,
-  characterDescription: css`
+  md: css`
     font-size: var(--mvl-font-size-md);
     font-weight: var(--mvl-font-weight-regular);
+    line-height: 1.5;
   `,
-  comicTitle: css`
+  sm: css`
     font-size: var(--mvl-font-size-sm);
     font-weight: var(--mvl-font-weight-regular);
+    line-height: 1.4;
   `,
-  searchPlaceholder: css`
+  xs: css`
     font-size: var(--mvl-font-size-xs);
     font-weight: var(--mvl-font-weight-regular);
+    line-height: 1.4;
   `,
-};
+} as const;
+
+export type TypographyVariant = keyof typeof typographyVariants;

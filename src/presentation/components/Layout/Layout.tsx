@@ -1,16 +1,16 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import { Outlet } from 'react-router-dom';
+import Header from './Header';
 
 type LayoutProps = {
-  children?: React.ReactNode;
+  children?: ReactNode;
 };
 
 const Layout: FC<LayoutProps> = () => {
   return (
     <div className="app">
-      <main>
-        <Outlet />
-      </main>
+      <Header />
+      <Outlet />
     </div>
   );
 };

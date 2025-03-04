@@ -8,28 +8,30 @@
   --mvl-color-gray: #aaaaaa;
 
   /* Spacing System (8px based) */
-  --mvl-space-2xs: 0.25rem; /* 4px */
-  --mvl-space-xs: 0.5rem; /* 8px */
-  --mvl-space-sm: 0.75rem; /* 12px */
-  --mvl-space-md: 1rem; /* 16px */
-  --mvl-space-lg: 1.5rem; /* 24px */
-  --mvl-space-xl: 2rem; /* 32px */
-  --mvl-space-2xl: 3rem; /* 48px */
-  --mvl-space-3xl: 4rem; /* 64px */
+  --mvl-space-4: 0.25rem; /* 4px */
+  --mvl-space-8: 0.5rem; /* 8px */
+  --mvl-space-12: 0.75rem; /* 12px */
+  --mvl-space-16: 1rem; /* 16px */
+  --mvl-space-24: 1.5rem; /* 24px */
+  --mvl-space-32: 2rem; /* 32px */
+  --mvl-space-48: 3rem; /* 48px */
+  --mvl-space-64: 4rem; /* 64px */
+  --mvl-space-84: 5.25rem; /* 84px */
+
 
   /* Layout Spacing */
-  --mvl-container-padding: var(--mvl-space-md);
-  --mvl-section-spacing: var(--mvl-space-2xl);
-  --mvl-stack-spacing: var(--mvl-space-md);
+  --mvl-container-padding: var(--mvl-space-16);
+  --mvl-section-spacing: var(--mvl-space-48);
+  --mvl-stack-spacing: var(--mvl-space-16);
   --mvl-max-width: 1200px;
 
   /* Typography Scale (1.250 Perfect Fourth) */
-  --mvl-font-size-xs: 0.8rem;
-  --mvl-font-size-sm: 1rem;
-  --mvl-font-size-md: 1.25rem;
-  --mvl-font-size-lg: 1.563rem;
-  --mvl-font-size-xl: 1.953rem;
-  --mvl-font-size-2xl: 2.441rem;
+  --mvl-font-size-xs: 0.6875rem; /* 11px */
+  --mvl-font-size-sm: 0.75rem; /* 12px */
+  --mvl-font-size-md: 0.875rem; /* 14px */
+  --mvl-font-size-xl: 1rem; /* 16px */
+  --mvl-font-size-2xl: 1.5rem; /* 24px */
+
 
   /* Typography */
   --mvl-font-family: "'Roboto Condensed', system-ui, -apple-system";
