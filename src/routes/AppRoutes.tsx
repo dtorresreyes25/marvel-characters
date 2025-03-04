@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Layout from '../presentation/components/Layout';
-import Characters from '../presentation/pages/Characters';
-import CharacterDetail from '../presentation/pages/CharacterDetail';
-import Favorites from '../presentation/pages/Favorites';
+import Layout from '@/presentation/components/Layout';
+import Characters from '@/presentation/pages/Characters';
+import CharacterDetail from '@/presentation/pages/CharacterDetail';
+import Favorites from '@/presentation/pages/Favorites';
 
 const AppRoutes: FC = () => (
   <BrowserRouter>
