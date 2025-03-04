@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;700&display=swap');
+
+:root {
+  /* Colors */
+  --mvl-color-white: #ffffff;
+  --mvl-color-black: #000000;
+  --mvl-color-red: #ec1d24;
+  --mvl-color-gray: #aaaaaa;
+
+  /* Spacing System (8px based) */
+  --mvl-space-2xs: 0.25rem; /* 4px */
+  --mvl-space-xs: 0.5rem; /* 8px */
+  --mvl-space-sm: 0.75rem; /* 12px */
+  --mvl-space-md: 1rem; /* 16px */
+  --mvl-space-lg: 1.5rem; /* 24px */
+  --mvl-space-xl: 2rem; /* 32px */
+  --mvl-space-2xl: 3rem; /* 48px */
+  --mvl-space-3xl: 4rem; /* 64px */
+
+  /* Layout Spacing */
+  --mvl-container-padding: var(--mvl-space-md);
+  --mvl-section-spacing: var(--mvl-space-2xl);
+  --mvl-stack-spacing: var(--mvl-space-md);
+  --mvl-max-width: 1200px;
+
+  /* Typography Scale (1.250 Perfect Fourth) */
+  --mvl-font-size-xs: 0.8rem;
+  --mvl-font-size-sm: 1rem;
+  --mvl-font-size-md: 1.25rem;
+  --mvl-font-size-lg: 1.563rem;
+  --mvl-font-size-xl: 1.953rem;
+  --mvl-font-size-2xl: 2.441rem;
+
+  /* Typography */
+  --mvl-font-family: "'Roboto Condensed', system-ui, -apple-system";
+  --mvl-font-weight-regular: 400;
+  --mvl-font-weight-medium: 500;
+  --mvl-font-weight-bold: 700;
+  --mvl-line-height: 1.2;
+
+  /* Transitions */
+  --mvl-transition-fast: 200ms ease-in-out;
+  --mvl-transition-normal: 300ms ease-in-out;
+}
