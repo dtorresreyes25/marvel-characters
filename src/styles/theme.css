@@ -8,6 +8,7 @@
   --mvl-color-gray: #aaaaaa;
 
   /* Spacing System (8px based) */
+  --mvl-space-0: 0; /* 0px */
   --mvl-space-4: 0.25rem; /* 4px */
   --mvl-space-8: 0.5rem; /* 8px */
   --mvl-space-12: 0.75rem; /* 12px */
@@ -18,12 +19,9 @@
   --mvl-space-64: 4rem; /* 64px */
   --mvl-space-84: 5.25rem; /* 84px */
 
-
-  /* Layout Spacing */
-  --mvl-container-padding: var(--mvl-space-16);
-  --mvl-section-spacing: var(--mvl-space-48);
-  --mvl-stack-spacing: var(--mvl-space-16);
-  --mvl-max-width: 1200px;
+  --mvl-icon-size-sm: 1.2rem;
+  --mvl-icon-size-md: 2.4rem;
+  --mvl-icon-size-xl: 3.6rem;
 
   /* Typography Scale (1.250 Perfect Fourth) */
   --mvl-font-size-xs: 0.6875rem; /* 11px */
