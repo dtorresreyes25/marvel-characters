@@ -1,5 +1,5 @@
 import { useState, useEffect, ChangeEvent } from 'react';
-import { useDebouncedValue } from '@/presentation/hooks/useDebouncedValue';
+import { useDebouncedValue } from '@/infraestructure/hooks/useDebouncedValue';
 import { ReactComponent as SearchIcon } from '@/assets/search.svg';
 import {
   SearchBar,
