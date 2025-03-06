@@ -8,14 +8,22 @@ import {
   Container,
 } from './SearchFilter.styles';
 
-const SearchFilter = () => {
+const DEBOUNCE_DELAY = 300;
+
+interface SearchFilterProps {
+  onSearchChange: (searchValue: string) => void;
+  count?: number;
+}
+
+const SearchFilter = ({ onSearchChange, count }: SearchFilterProps) => {
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState(50);
-  const debouncedQuery = useDebouncedValue(query, 300);
+  const debouncedQuery = useDebouncedValue(query.trim(), DEBOUNCE_DELAY);
 
   useEffect(() => {
-    setResults(Math.max(50 - debouncedQuery.length * 2, 0));
-  }, [debouncedQuery]);
+    onSearchChange(debouncedQuery);
+  }, [debouncedQuery, onSearchChange]);
+
+  const isValidCount = typeof count === 'number' && count >= 0;
 
   return (
     <Container>
@@ -30,7 +38,8 @@ const SearchFilter = () => {
           }
         />
       </SearchBar>
-      <ResultsText variant="sm">{results} RESULTS</ResultsText>
+
+      {isValidCount && <ResultsText variant="sm">{count} RESULTS</ResultsText>}
     </Container>
   );
 };
