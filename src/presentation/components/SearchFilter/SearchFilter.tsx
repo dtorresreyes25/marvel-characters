@@ -30,8 +30,9 @@ const SearchFilter = ({ onSearchChange, count }: SearchFilterProps) => {
       <SearchBar>
         <SearchIcon size={20} color="gray" />
         <Input
-          type="text"
+          type="seach"
           placeholder="Search a character..."
+          aria-label="Search Marvel characters"
           value={query}
           onChange={(e: ChangeEvent<HTMLInputElement>) =>
             setQuery(e.target.value)

@@ -19,6 +19,6 @@ export const useCharactersRepository = (params: CharactersParams) =>
           params,
         }
       ),
-    select: ({ data }) => data,
+    select: ({ data: pagedListResponse }) => pagedListResponse.data,
     placeholderData: keepPreviousData,
   });

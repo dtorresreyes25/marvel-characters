@@ -8,7 +8,7 @@ const httpClient: AxiosInstance = axios.create({
     'Content-Type': 'application/json',
   },
   params: {
-    apiKey: VITE_API_KEY,
+    apikey: VITE_API_KEY,
   },
 });
 
