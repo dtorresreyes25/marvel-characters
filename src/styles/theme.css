@@ -30,9 +30,8 @@
   --mvl-font-size-xl: 1rem; /* 16px */
   --mvl-font-size-2xl: 1.5rem; /* 24px */
 
-
   /* Typography */
-  --mvl-font-family: "'Roboto Condensed', system-ui, -apple-system";
+  --mvl-font-family: Roboto Condensed, system-ui, -apple-system;
   --mvl-font-weight-regular: 400;
   --mvl-font-weight-medium: 500;
   --mvl-font-weight-bold: 700;

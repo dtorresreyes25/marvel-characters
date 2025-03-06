@@ -6,7 +6,7 @@ import {
 } from './Typography.variants.ts';
 
 interface TypographyProps {
-  $variant?: TypographyVariant;
+  variant?: TypographyVariant;
   children: ReactNode;
   className?: string;
 }
@@ -16,11 +16,11 @@ const StyledText = styled.p<{ $variant: TypographyVariant }>`
 `;
 
 const Typography: React.FC<TypographyProps> = ({
-  $variant = 'md',
+  variant = 'md',
   children,
   className,
 }) => (
-  <StyledText $variant={$variant} className={className}>
+  <StyledText $variant={variant} className={className}>
     {children}
   </StyledText>
 );

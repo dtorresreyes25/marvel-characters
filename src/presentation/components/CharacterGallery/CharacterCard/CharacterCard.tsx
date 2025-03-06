@@ -30,7 +30,7 @@ const CharacterCard: FC<CharacterCardProps> = ({ character }) => {
         <Picture src={imageUrl} alt={name} />
         <Divider />
         <Description>
-          <Name $variant="md">{name}</Name>
+          <Name variant="md">{name}</Name>
           <FavoriteIcon
             size="sm"
             icon={<HeartOutlinedIcon />}

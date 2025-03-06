@@ -30,7 +30,7 @@ const SearchFilter = () => {
           }
         />
       </SearchBar>
-      <ResultsText $variant="sm">{results} RESULTS</ResultsText>
+      <ResultsText variant="sm">{results} RESULTS</ResultsText>
     </Container>
   );
 };
