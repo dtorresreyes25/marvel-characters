@@ -2,21 +2,23 @@ import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import httpClient from '@/infraestructure/httpClient';
 import { Character } from '@/domain/model';
 import { PagedListResponse } from '@/infraestructure/dto';
+import { API_ENDPOINT } from '@/infraestructure/constants';
 
-interface FetchCharactersParams {
+interface CharactersParams {
   nameStartsWith?: string | null;
   limit?: number;
 }
 
-const API_ENDPOINT = 'characters';
-
-export const useCharactersRepository = (params: FetchCharactersParams) =>
+export const useCharactersRepository = (params: CharactersParams) =>
   useQuery({
-    queryKey: [API_ENDPOINT, params],
+    queryKey: [API_ENDPOINT.CHARACTERS, params],
     queryFn: () =>
-      httpClient.get<PagedListResponse<Character>>(`/${API_ENDPOINT}`, {
-        params,
-      }),
+      httpClient.get<PagedListResponse<Character>>(
+        `/${API_ENDPOINT.CHARACTERS}`,
+        {
+          params,
+        }
+      ),
     select: ({ data }) => data,
     placeholderData: keepPreviousData,
   });
