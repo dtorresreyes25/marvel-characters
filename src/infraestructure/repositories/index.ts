@@ -1,1 +1,2 @@
-export * from './useCharactersRepository.ts';
+export * from './useCharactersRepository';
+export * from './useCharacterDetailsRepository';
