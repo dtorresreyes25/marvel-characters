@@ -15,11 +15,13 @@
   --mvl-space-16: 1rem; /* 16px */
   --mvl-space-24: 1.5rem; /* 24px */
   --mvl-space-32: 2rem; /* 32px */
+  --mvl-space-36: 2.25rem; /* 36px */
   --mvl-space-48: 3rem; /* 48px */
+  --mvl-space-60: 3.75rem; /* 60px */
   --mvl-space-64: 4rem; /* 64px */
   --mvl-space-84: 5.25rem; /* 84px */
 
-  --mvl-icon-size-sm: 1.2rem;
+  --mvl-icon-size-sm: 0.75rem; /* 12px */;
   --mvl-icon-size-md: 2.4rem;
   --mvl-icon-size-xl: 3.6rem;
 

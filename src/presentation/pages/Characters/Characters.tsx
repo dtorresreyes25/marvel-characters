@@ -1,8 +1,8 @@
 import { FC, useCallback, useState } from 'react';
 import CharacterGallery from '@/presentation/components/CharacterGallery';
-import SearchFilter from '@/presentation/components/SearchFilter';
 import { useCharactersRepository } from '@/infraestructure/repositories';
 import LoadingSpinner from '@/presentation/components/LoadingSpinner';
+import { Container, SearchBar } from './Characters.styles';
 
 const PAGE_SIZE = 50;
 
@@ -23,16 +23,16 @@ const Characters: FC = () => {
   }, []);
 
   return (
-    <>
-      <SearchFilter
+    <Container>
+      <SearchBar
         onSearchChange={handleOnSearchChange}
-        count={characters?.total}
+        count={characters?.count}
       />
       {isFetching && <LoadingSpinner />}
       {isSuccess && !isFetching && characters?.results && (
         <CharacterGallery characters={characters.results} />
       )}
-    </>
+    </Container>
   );
 };
 

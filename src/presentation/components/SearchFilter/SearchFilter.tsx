@@ -15,7 +15,11 @@ interface SearchFilterProps {
   count?: number;
 }
 
-const SearchFilter = ({ onSearchChange, count }: SearchFilterProps) => {
+const SearchFilter = ({
+  onSearchChange,
+  count,
+  ...props
+}: SearchFilterProps) => {
   const [query, setQuery] = useState('');
   const debouncedQuery = useDebouncedValue(query.trim(), DEBOUNCE_DELAY);
 
@@ -26,7 +30,7 @@ const SearchFilter = ({ onSearchChange, count }: SearchFilterProps) => {
   const isValidCount = typeof count === 'number' && count >= 0;
 
   return (
-    <Container>
+    <Container {...props}>
       <SearchBar>
         <SearchIcon size={20} color="gray" />
         <Input

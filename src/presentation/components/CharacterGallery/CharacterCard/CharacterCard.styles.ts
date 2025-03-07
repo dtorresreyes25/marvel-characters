@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Typography from '@/presentation/components/Typography';
 import ButtonWithIcon from '@/presentation/components/ButtonWithIcon';
 
-export const Container = styled.div`
+export const Container = styled.li`
   display: flex;
   flex-direction: column;
 `;
@@ -16,7 +16,7 @@ export const RouterLink = styled(Link)`
 `;
 
 export const Picture = styled.img`
-  height: 19rem;
+  height: 11.875rem;
   object-fit: cover;
 `;
 

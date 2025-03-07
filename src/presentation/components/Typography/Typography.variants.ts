@@ -14,7 +14,7 @@ export const typographyVariants = {
   md: css`
     font-size: var(--mvl-font-size-md);
     font-weight: var(--mvl-font-weight-regular);
-    line-height: 1.5;
+    line-height: 1.2;
   `,
   sm: css`
     font-size: var(--mvl-font-size-sm);
