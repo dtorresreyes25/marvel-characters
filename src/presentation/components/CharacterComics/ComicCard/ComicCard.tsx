@@ -1,0 +1,30 @@
+import { FC } from 'react';
+import { Wrapper, Thumbnail, Heading } from './ComicCard.styles';
+import { Comic } from '@/domain/model';
+import Typography from '@/presentation/components/Typography';
+
+interface Props {
+  comic: Comic;
+}
+
+const ComicCard: FC<Props> = ({ comic }) => {
+  const releaseInfo = comic.dates.find(({ type }) => type === 'onsaleDate');
+  const publicationYear = releaseInfo
+    ? new Date(releaseInfo.date).getFullYear()
+    : null;
+
+  return (
+    <Wrapper>
+      <Thumbnail
+        src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
+        alt={`Cover of ${comic.title}`}
+      />
+      <Heading variant="md">{comic.title}</Heading>
+      {publicationYear && (
+        <Typography variant="sm">{publicationYear}</Typography>
+      )}
+    </Wrapper>
+  );
+};
+
+export default ComicCard;
