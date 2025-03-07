@@ -20,6 +20,7 @@ export const Input = styled.input`
   outline: none;
   padding-left: var(--mvl-space-12);
   color: var(--mvl-color-black);
+  text-transform: uppercase;
 
   &::placeholder {
     text-transform: uppercase;

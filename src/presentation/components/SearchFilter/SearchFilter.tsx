@@ -34,7 +34,7 @@ const SearchFilter = ({
       <SearchBar>
         <SearchIcon size={20} color="gray" />
         <Input
-          type="seach"
+          type="search"
           placeholder="Search a character..."
           aria-label="Search Marvel characters"
           value={query}
