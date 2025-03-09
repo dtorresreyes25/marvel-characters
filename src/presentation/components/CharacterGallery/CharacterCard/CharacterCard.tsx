@@ -26,7 +26,7 @@ const CharacterCard: FC<CharacterCardProps> = ({ character }) => {
 
   return (
     <Container>
-      <RouterLink to={`/characters/${id}`}>
+      <RouterLink to={`/character/${id}`}>
         <Picture src={imageUrl} alt={name} />
         <Divider />
         <Description>

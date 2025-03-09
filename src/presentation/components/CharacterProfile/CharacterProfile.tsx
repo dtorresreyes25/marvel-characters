@@ -29,11 +29,11 @@ const CharacterProfile: FC<CharacterProfileProps> = ({ character }) => {
 
         <Summary>
           <Actions>
-            <Title as="h1">{character.name}</Title>
+            <Title variant="xxxl">{character.name}</Title>
             <ButtonWithIcon
               icon={<HeartFilled />}
               onClick={handleFavoriteClick}
-              size={'sm'}
+              size={'md'}
             />
           </Actions>
           <Typography variant="md">{character.description}</Typography>

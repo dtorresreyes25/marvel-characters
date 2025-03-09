@@ -7,9 +7,14 @@ export interface ButtonWithIconProps {
   size: 'sm' | 'md' | 'xl';
 }
 
-const ButtonWithIcon: FC<ButtonWithIconProps> = ({ icon, onClick, size }) => {
+const ButtonWithIcon: FC<ButtonWithIconProps> = ({
+  icon,
+  onClick,
+  size,
+  ...props
+}) => {
   return (
-    <Button onClick={onClick}>
+    <Button onClick={onClick} {...props}>
       <IconWrapper size={size}>{icon}</IconWrapper>
     </Button>
   );

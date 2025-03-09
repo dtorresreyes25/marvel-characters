@@ -25,4 +25,5 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   gap: var(--mvl-space-12);
+  margin: var(--mvl-space-24);
 `;

@@ -5,28 +5,32 @@ import Typography from '@/presentation/components/Typography';
 export const Wrapper = styled.li`
   display: flex;
   flex-direction: column;
-  width: 17.9rem;
+  width: 11.635rem;
+
   ${media.smallMedia} {
-    width: 16.9rem;
+    width: 10.985rem;
   }
+
   ${media.lteExtraSmallMedia} {
-    width: 16.4rem;
+    width: 10.65rem;
   }
 `;
 
 export const Thumbnail = styled.img`
   object-fit: contain;
-  height: 26.9rem;
+  height: 17.485rem;
 
   ${media.smallMedia} {
-    height: 25.3rem;
+    height: 16.445rem;
   }
+
   ${media.lteExtraSmallMedia} {
-    height: 24.8rem;
+    height: 16.1rem;
   }
 `;
 
 export const Heading = styled(Typography)`
+  font-weight: var(--mvl-font-weight-medium);
   margin-top: var(--mvl-space-12);
   margin-bottom: var(--mvl-space-8);
 `;

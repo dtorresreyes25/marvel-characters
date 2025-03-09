@@ -1,8 +1,13 @@
 import { css } from 'styled-components';
 
 export const typographyVariants = {
+  xxxl: css`
+    font-size: var(--mvl-font-size-xxxl);
+    font-weight: var(--mvl-font-weight-bold);
+    line-height: 1.1;
+  `,
   xxl: css`
-    font-size: var(--mvl-font-size-2xl);
+    font-size: var(--mvl-font-size-xxl);
     font-weight: var(--mvl-font-weight-bold);
     line-height: 1.1;
   `,

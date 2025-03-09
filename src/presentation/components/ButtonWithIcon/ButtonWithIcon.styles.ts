@@ -11,9 +11,7 @@ export const Button = styled.button`
 `;
 
 export const IconWrapper = styled.span<{ size: 'sm' | 'md' | 'xl' }>`
-  width: ${({ size }) => `var(--mvl-icon-size-${size})`};
   svg {
-    width: 100%;
-    height: 100%;
+    width: ${({ size }) => `var(--mvl-icon-size-${size})`};
   }
 `;

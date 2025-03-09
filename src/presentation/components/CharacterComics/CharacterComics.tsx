@@ -11,7 +11,7 @@ export const CharacterComics: FC<CharacterComicsProps> = ({ comics }) => {
   return (
     <Section>
       <Container>
-        <Header variant="md">Comics</Header>
+        <Header variant="xxl">Comics</Header>
         <List>
           {comics.map((comic) => (
             <ComicCard key={comic.id} comic={comic} />

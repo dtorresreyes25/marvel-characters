@@ -21,7 +21,7 @@ export const Picture = styled.img`
 `;
 
 export const Divider = styled.hr`
-  height: 0.5rem;
+  height: 0.3125rem;
   background-color: var(--mvl-color-red);
   margin: var(--mvl-space-0);
   border: var(--mvl-space-0);

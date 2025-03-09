@@ -21,7 +21,7 @@ const ComicCard: FC<Props> = ({ comic }) => {
       />
       <Heading variant="md">{comic.title}</Heading>
       {publicationYear && (
-        <Typography variant="sm">{publicationYear}</Typography>
+        <Typography variant="xs">{publicationYear}</Typography>
       )}
     </Wrapper>
   );

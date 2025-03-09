@@ -4,7 +4,7 @@ const LoadingSpinner = () => {
   return (
     <Container>
       <Spinner />
-      <LoadingText variant="xl">Loading...</LoadingText>
+      <LoadingText variant="md">Loading...</LoadingText>
     </Container>
   );
 };

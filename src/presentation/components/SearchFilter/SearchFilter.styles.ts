@@ -11,7 +11,7 @@ export const SearchBar = styled.div`
   display: flex;
   align-items: center;
   padding-bottom: var(--mvl-space-8);
-  border-bottom: 0.1rem solid var(--mvl-color-black);
+  border-bottom: 0.0625rem solid var(--mvl-color-black);
 `;
 
 export const Input = styled.input`
@@ -24,7 +24,7 @@ export const Input = styled.input`
 
   &::placeholder {
     text-transform: uppercase;
-    color: var(--mvl-color-gray);
+    color: var(--mvl-color-gray-foreground);
   }
 `;
 

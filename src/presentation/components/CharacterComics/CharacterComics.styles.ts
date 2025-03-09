@@ -16,7 +16,7 @@ export const Container = styled.div`
   width: 100%;
 
   ${gteMediumMedia} {
-    max-width: 96rem;
+    max-width: 62.4rem;
   }
 `;
 
@@ -24,7 +24,7 @@ export const Header = styled(Typography)`
   text-transform: uppercase;
 
   ${lteSmallMedia} {
-    ${typographyVariants.md};
+    ${typographyVariants.xl};
   }
 
   ${smallMedia}, ${lteExtraSmallMedia} {
@@ -41,19 +41,18 @@ export const List = styled.ul`
   gap: var(--mvl-space-16);
   overflow-x: auto;
   list-style: none;
-  margin: 0;
-  padding: var(--mvl-space-24) 0;
+  margin: var(--mvl-space-0);
+  padding: var(--mvl-space-24) var(--mvl-space-0);
 
-  ${smallMedia}, ${lteExtraSmallMedia} {
+  ${media.smallMedia} {
     & > :first-child {
-      margin-left: var(--mvl-space-48);
+      margin-left: var(--mvl-space-48));
     }
     & > :last-child {
-      margin-right: var(--mvl-space-48);
+      margin-right: var(--mvl-space-48));
     }
   }
-
-  ${lteExtraSmallMedia} {
+  ${media.lteExtraSmallMedia} {
     & > :first-child {
       margin-left: var(--mvl-space-16);
     }

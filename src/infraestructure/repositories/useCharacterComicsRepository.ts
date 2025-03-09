@@ -4,23 +4,33 @@ import { PagedListResponse } from '@/infraestructure/dto';
 import { Comic } from '@/domain/model';
 import { API_ENDPOINT } from '@/infraestructure/constants';
 
-interface CharacterComicsParams {
+interface FetchComicsParams {
   limit?: number;
 }
 
+const fetchCharacterComics = async (
+  characterId: string,
+  options?: FetchComicsParams
+) => {
+  const { data: response } = await httpClient.get<PagedListResponse<Comic>>(
+    `/${API_ENDPOINT.CHARACTERS}/${characterId}/${API_ENDPOINT.COMICS}`,
+    { params: options }
+  );
+  return response.data.results;
+};
+
 export const useCharacterComicsRepository = (
-  id?: string,
-  params?: CharacterComicsParams
-) =>
-  useQuery({
-    enabled: !!id,
-    queryKey: [API_ENDPOINT.CHARACTERS, API_ENDPOINT.COMICS, id, params],
-    queryFn: () =>
-      httpClient.get<PagedListResponse<Comic>>(
-        `/${API_ENDPOINT.CHARACTERS}/${id}/${API_ENDPOINT.COMICS}`,
-        {
-          params,
-        }
-      ),
-    select: ({ data: response }) => response.data.results,
+  characterId?: string,
+  options?: FetchComicsParams
+) => {
+  return useQuery({
+    queryKey: [
+      API_ENDPOINT.CHARACTERS,
+      characterId,
+      API_ENDPOINT.COMICS,
+      options?.limit ?? 'default',
+    ],
+    queryFn: () => fetchCharacterComics(characterId!, options), // Ensure `characterId!` is non-null
+    enabled: Boolean(characterId),
   });
+};

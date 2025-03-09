@@ -4,13 +4,17 @@ import { Character } from '@/domain/model';
 import { PagedListResponse } from '@/infraestructure/dto';
 import { API_ENDPOINT } from '@/infraestructure/constants';
 
-export const useCharactersDetailsRepository = (id?: string) =>
-  useQuery({
-    enabled: !!id,
-    queryKey: [API_ENDPOINT.CHARACTERS, id],
-    queryFn: () =>
-      httpClient.get<PagedListResponse<Character>>(
-        `/${API_ENDPOINT.CHARACTERS}/${id}`
-      ),
-    select: ({ data: response }) => response.data.results[0],
+const fetchCharacterDetails = async (characterId: string) => {
+  const { data: response } = await httpClient.get<PagedListResponse<Character>>(
+    `/${API_ENDPOINT.CHARACTERS}/${characterId}`
+  );
+  return response.data.results[0];
+};
+
+export const useCharacterDetailsRepository = (characterId?: string) => {
+  return useQuery({
+    queryKey: [API_ENDPOINT.CHARACTERS, characterId],
+    queryFn: () => fetchCharacterDetails(characterId!),
+    enabled: !!characterId,
   });
+};

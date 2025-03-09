@@ -19,11 +19,10 @@ export const Header = styled.header`
     content: '';
     position: absolute;
     background-color: var(--mvl-color-white);
-
-    width: 2.4rem;
-    height: 2.4rem;
-    right: -1.2rem;
-    bottom: -1.2rem;
+    width: 1.56rem;
+    height: 1.56rem;
+    right: -0.78rem;
+    bottom: -0.78rem;
     transform: rotate(45deg);
   }
 `;
@@ -34,7 +33,7 @@ export const Content = styled.div`
   width: 100%;
 
   ${media.gteMediumMedia} {
-    max-width: 96rem;
+    max-width: 62.4rem;
   }
   ${media.gteSmallMedia} {
     gap: var(--mvl-space-48);
@@ -48,13 +47,13 @@ export const Content = styled.div`
 `;
 
 export const Avatar = styled.img`
-  width: 32rem;
-  height: 32rem;
+  width: 20.8rem;
+  height: 20.8rem;
   object-fit: cover;
 
   ${media.smallMedia} {
-    width: 27.8rem;
-    height: 27.8rem;
+    width: 18.07rem;
+    height: 18.07rem;
   }
   ${media.lteExtraSmallMedia} {
     width: 100%;
@@ -83,6 +82,6 @@ export const Actions = styled.div`
 
 export const Title = styled(Typography)`
   ${media.lteSmallMedia} {
-    ${typographyVariants.md};
+    ${typographyVariants.xl};
   }
 `;

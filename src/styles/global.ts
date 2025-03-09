@@ -25,16 +25,30 @@ const GlobalStyles = createGlobalStyle<DefaultTheme>`
     color: var(--mvl-color-black);
   }
 
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-
   button {
     font: inherit;
     border: none;
     cursor: pointer;
+  }
+  
+  @-moz-document url-prefix() {
+      scrollbar-color: var(--mvl-color-red) var(--mvl-color-gray-foreground);
+      scrollbar-width: thin;
+  }
+  
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+      ::-webkit-scrollbar {
+          width: var(--mvl-space-4);
+          height: var(--mvl-space-4);
+      }
+
+      ::-webkit-scrollbar-track {
+          background: var(--mvl-color-gray-background);
+      }
+
+      ::-webkit-scrollbar-thumb {
+          background: var(--mvl-color-red);
+      }
   }
 `;
 
