@@ -3,15 +3,14 @@ import { Character } from '@/domain/model';
 
 interface CharacterState {
   favorites: Map<number, Character>;
-  toggleFavorite: (character: Character) => void;
-  isFavorite: (id: number) => boolean;
+  toggleCharacterFavorite: (character: Character) => void;
+  isCharacterFavorite: (id: number) => boolean;
 }
 
 export const useCharacterFavoritesStore = create<CharacterState>(
   (set, get) => ({
     favorites: new Map(),
-
-    toggleFavorite: (character) =>
+    toggleCharacterFavorite: (character) =>
       set((state) => {
         const favorites = new Map(state.favorites);
         const isFavorite = favorites.has(character.id);
@@ -23,7 +22,6 @@ export const useCharacterFavoritesStore = create<CharacterState>(
         }
         return { favorites };
       }),
-
-    isFavorite: (id) => get().favorites.has(id),
+    isCharacterFavorite: (id) => get().favorites.has(id),
   })
 );

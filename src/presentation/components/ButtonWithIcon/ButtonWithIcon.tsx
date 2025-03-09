@@ -1,21 +1,26 @@
-import { FC, ReactNode } from 'react';
-import { Button, IconWrapper } from './ButtonWithIcon.styles';
+import { FC, MouseEvent, FunctionComponent, SVGProps } from 'react';
+import { Button } from './ButtonWithIcon.styles';
 
 export interface ButtonWithIconProps {
-  icon: ReactNode;
-  onClick: () => void;
+  icon: FunctionComponent<SVGProps<SVGElement>>;
+  onClick: (event: MouseEvent<HTMLButtonElement>) => void;
   size: 'sm' | 'md' | 'xl';
 }
 
 const ButtonWithIcon: FC<ButtonWithIconProps> = ({
-  icon,
+  icon: Icon,
   onClick,
   size,
   ...props
 }) => {
+  const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    onClick(e);
+  };
+
   return (
-    <Button onClick={onClick} {...props}>
-      <IconWrapper size={size}>{icon}</IconWrapper>
+    <Button onClick={handleClick} size={size} {...props}>
+      <Icon />
     </Button>
   );
 };

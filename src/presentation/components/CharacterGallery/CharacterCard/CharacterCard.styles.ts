@@ -74,10 +74,10 @@ export const Description = styled.section`
     content: '';
     position: absolute;
     z-index: 1;
-    width: 1.2rem;
-    height: 1.2rem;
-    right: -0.6rem;
-    bottom: -0.6rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    right: -0.375rem;
+    bottom: -0.375rem;
     background-color: var(--mvl-color-white);
     transform: rotate(45deg);
   }

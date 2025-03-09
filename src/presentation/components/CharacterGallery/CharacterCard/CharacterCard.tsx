@@ -7,10 +7,11 @@ import {
   FavoriteIcon,
   RouterLink,
 } from './CharacterCard.styles';
-import { FC, useCallback } from 'react';
-//import { ReactComponent as HeartFilledIcon } from '@/assets/heart_filled.svg';
+import { FC } from 'react';
+import { ReactComponent as HeartFilledIcon } from '@/assets/heart_filled.svg';
 import { ReactComponent as HeartOutlinedIcon } from '@/assets/heart_outlined.svg';
 import { Character } from '@/domain/model';
+import { useCharacterFavoritesStore } from '@/application/store/useCharacterFavoritesStore.ts';
 
 interface CharacterCardProps {
   character: Character;
@@ -18,24 +19,35 @@ interface CharacterCardProps {
 
 const CharacterCard: FC<CharacterCardProps> = ({ character }) => {
   const { id, name, thumbnail } = character;
-  const imageUrl = `${thumbnail.path}.${thumbnail.extension}`;
+  const characterImageUrl = `${thumbnail.path}.${thumbnail.extension}`;
 
-  const handleFavoriteClick = useCallback(() => {
-    // TODO: Implement favorite functionality
-  }, []);
+  const { toggleCharacterFavorite, isCharacterFavorite } =
+    useCharacterFavoritesStore();
+
+  const onToggleFavorite = () => {
+    toggleCharacterFavorite(character);
+  };
+
+  const FavoriteIconComponent = isCharacterFavorite(character.id)
+    ? HeartFilledIcon
+    : HeartOutlinedIcon;
+
+  const ariaLabel = isCharacterFavorite(character.id)
+    ? `Remove ${name} from favorites`
+    : `Add ${name} to favorites`;
 
   return (
     <Container>
       <RouterLink to={`/character/${id}`}>
-        <Picture src={imageUrl} alt={name} />
+        <Picture src={characterImageUrl} alt={name} />
         <Divider />
         <Description>
-          <Name variant="md">{name}</Name>
+          <Name variant="sm">{name}</Name>
           <FavoriteIcon
             size="sm"
-            icon={<HeartOutlinedIcon />}
-            onClick={handleFavoriteClick}
-            aria-label={`Add ${name} to favorites`}
+            aria-label={ariaLabel}
+            icon={FavoriteIconComponent}
+            onClick={onToggleFavorite}
           />
         </Description>
       </RouterLink>

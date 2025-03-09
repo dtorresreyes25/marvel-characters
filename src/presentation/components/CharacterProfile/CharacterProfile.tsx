@@ -31,7 +31,7 @@ const CharacterProfile: FC<CharacterProfileProps> = ({ character }) => {
           <Actions>
             <Title variant="xxxl">{character.name}</Title>
             <ButtonWithIcon
-              icon={<HeartFilled />}
+              icon={HeartFilled}
               onClick={handleFavoriteClick}
               size={'md'}
             />

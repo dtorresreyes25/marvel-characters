@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Button = styled.button`
+export const Button = styled.button<{ size: 'sm' | 'md' | 'xl' }>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,9 +8,7 @@ export const Button = styled.button`
   cursor: pointer;
   background: none;
   z-index: 0;
-`;
 
-export const IconWrapper = styled.span<{ size: 'sm' | 'md' | 'xl' }>`
   svg {
     width: ${({ size }) => `var(--mvl-icon-size-${size})`};
   }
