@@ -11,7 +11,7 @@ import { FC } from 'react';
 import { ReactComponent as HeartFilledIcon } from '@/assets/heart_filled.svg';
 import { ReactComponent as HeartOutlinedIcon } from '@/assets/heart_outlined.svg';
 import { Character } from '@/domain/model';
-import { useCharacterFavoritesStore } from '@/application/store/useCharacterFavoritesStore.ts';
+import { useFavoriteCharactersStore } from '@/application/store/useFavoriteCharactersStore.ts';
 
 interface CharacterCardProps {
   character: Character;
@@ -22,7 +22,7 @@ const CharacterCard: FC<CharacterCardProps> = ({ character }) => {
   const characterImageUrl = `${thumbnail.path}.${thumbnail.extension}`;
 
   const { toggleCharacterFavorite, isCharacterFavorite } =
-    useCharacterFavoritesStore();
+    useFavoriteCharactersStore();
 
   const onToggleFavorite = () => {
     toggleCharacterFavorite(character);

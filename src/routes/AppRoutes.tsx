@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from '@/presentation/components/Layout';
 import Characters from '@/presentation/pages/Characters';
 import CharacterDetail from '@/presentation/pages/CharacterDetail';
-import Favorites from '@/presentation/pages/Favorites';
+import FavoriteCharacters from '@/presentation/pages/FavoriteCharacters/FavoriteCharacters.tsx';
 
 const AppRoutes: FC = () => (
   <BrowserRouter>
@@ -12,7 +12,7 @@ const AppRoutes: FC = () => (
         <Route path="/">
           <Route index element={<Characters />} />
           <Route path="character/:id" element={<CharacterDetail />} />
-          <Route path="favorites" element={<Favorites />} />
+          <Route path="favorites" element={<FavoriteCharacters />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Route>

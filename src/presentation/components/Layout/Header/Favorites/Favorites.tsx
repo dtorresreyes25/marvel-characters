@@ -1,17 +1,17 @@
 import { FC } from 'react';
-import { Container } from './Favorites.style.ts';
+import { RouterNavLink } from './Favorites.style.ts';
 import { ReactComponent as HeartFilledIcon } from '@/assets/heart_filled.svg';
 import Typography from '@/presentation/components/Typography';
-import { useCharacterFavoritesStore } from '@/application/store/useCharacterFavoritesStore';
+import { useFavoriteCharactersStore } from '@/application/store/useFavoriteCharactersStore.ts';
 
 const Favorites: FC = () => {
-  const { favorites } = useCharacterFavoritesStore();
+  const { favorites } = useFavoriteCharactersStore();
 
   return (
-    <Container>
+    <RouterNavLink to="/favorites">
       <HeartFilledIcon />
       <Typography variant="md">{favorites?.size}</Typography>
-    </Container>
+    </RouterNavLink>
   );
 };
 

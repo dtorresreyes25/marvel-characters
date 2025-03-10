@@ -1,5 +1,6 @@
 import { FC } from 'react';
-import { ReactComponent as HeartFilled } from '@/assets/heart_filled.svg';
+import { ReactComponent as HeartFilledIcon } from '@/assets/heart_filled.svg';
+import { ReactComponent as HeartOutlinedIcon } from '@/assets/heart_outlined.svg';
 import Typography from '@/presentation/components/Typography';
 import {
   Header,
@@ -11,13 +12,19 @@ import {
 } from './CharacterProfile.styles';
 import { Character } from '@/domain/model';
 import ButtonWithIcon from '@/presentation/components/ButtonWithIcon';
+import { useFavoriteCharactersStore } from '@/application/store/useFavoriteCharactersStore';
 
 export interface CharacterProfileProps {
   character: Character;
 }
 
 const CharacterProfile: FC<CharacterProfileProps> = ({ character }) => {
-  const handleFavoriteClick = () => {};
+  const { toggleCharacterFavorite, isCharacterFavorite } =
+    useFavoriteCharactersStore();
+
+  const handleFavoriteClick = () => {
+    toggleCharacterFavorite(character);
+  };
 
   return (
     <Header>
@@ -31,7 +38,11 @@ const CharacterProfile: FC<CharacterProfileProps> = ({ character }) => {
           <Actions>
             <Title variant="xxxl">{character.name}</Title>
             <ButtonWithIcon
-              icon={HeartFilled}
+              icon={
+                isCharacterFavorite(character.id)
+                  ? HeartFilledIcon
+                  : HeartOutlinedIcon
+              }
               onClick={handleFavoriteClick}
               size={'md'}
             />
