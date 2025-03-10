@@ -24,6 +24,7 @@ const Characters: FC = () => {
 
   return (
     <Container>
+      <title>Marvel Characters | Characters</title>
       <SearchBar
         onSearchChange={handleOnSearchChange}
         count={characters?.count}

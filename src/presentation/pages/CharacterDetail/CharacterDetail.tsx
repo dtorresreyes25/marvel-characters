@@ -17,13 +17,24 @@ const CharacterDetail: FC = () => {
     limit: ITEMS_PER_PAGE,
   });
 
-  if (isLoading) return <LoadingSpinner />;
+  const title = isLoading
+    ? 'Loading Marvel hero...'
+    : `Marvel Characters | ${character?.name} - Character Details`;
 
   return (
-    <section>
-      {character && <CharacterProfile character={character} />}
-      {comics?.length > 0 && <CharacterComics comics={comics} />}
-    </section>
+    <>
+      <title>{title}</title>
+      <section>
+        {isLoading ? (
+          <LoadingSpinner />
+        ) : (
+          <>
+            {character && <CharacterProfile character={character} />}
+            {comics?.length > 0 && <CharacterComics comics={comics} />}
+          </>
+        )}
+      </section>
+    </>
   );
 };
 

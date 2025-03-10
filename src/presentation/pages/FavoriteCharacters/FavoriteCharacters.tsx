@@ -17,6 +17,7 @@ const FavoriteCharacters: FC = () => {
 
   return (
     <Container>
+      <title>Marvel Characters | Favorites</title>
       <Header variant="xxl">Favorites</Header>
       <SearchBar
         onSearchChange={handleOnSearchChange}
