@@ -1,8 +1,8 @@
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import httpClient from '../services/httpClient';
-import { Character, PagedListResponse } from '../types';
+import { Character, PagedListResponse } from '@/types';
 
-import { API_ENDPOINT } from '../constants';
+import { API_ENDPOINT } from '@/constants';
 
 interface FetchCharactersParams {
   nameStartsWith?: string | null;

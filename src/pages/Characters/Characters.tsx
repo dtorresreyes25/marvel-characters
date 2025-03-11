@@ -31,7 +31,12 @@ const Characters: FC = () => {
       />
       {isFetching && <LoadingSpinner />}
       {isSuccess && !isFetching && characters?.results && (
-        <CharacterGallery characters={characters.results} />
+        <div data-testid="character-gallery">
+          <CharacterGallery
+            characters={characters.results}
+            data-testid="character-gallery"
+          />
+        </div>
       )}
     </Container>
   );

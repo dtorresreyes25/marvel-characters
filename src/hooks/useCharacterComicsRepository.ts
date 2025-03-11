@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
-import httpClient from '../services/httpClient';
-import { Comic, PagedListResponse } from '../types';
-import { API_ENDPOINT } from '../constants';
+import httpClient from '@/services/httpClient';
+import { Comic, PagedListResponse } from '@/types';
+import { API_ENDPOINT } from '@/constants';
 
 interface FetchComicsParams {
   limit?: number;
@@ -15,6 +15,7 @@ const fetchCharacterComics = async (
     `/${API_ENDPOINT.CHARACTERS}/${characterId}/${API_ENDPOINT.COMICS}`,
     { params: options }
   );
+
   return response.data.results;
 };
 
@@ -29,7 +30,7 @@ export const useCharacterComicsRepository = (
       API_ENDPOINT.COMICS,
       options?.limit ?? 'default',
     ],
-    queryFn: () => fetchCharacterComics(characterId!, options), // Ensure `characterId!` is non-null
+    queryFn: () => fetchCharacterComics(characterId!, options),
     enabled: Boolean(characterId),
   });
 };
