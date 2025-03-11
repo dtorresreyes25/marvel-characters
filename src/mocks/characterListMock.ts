@@ -1,4 +1,4 @@
-import { Character } from '@/domain/model/Character.ts';
+import { Character } from '@/types/Character.ts';
 
 export const characterListMock: Character[] = [
   {
