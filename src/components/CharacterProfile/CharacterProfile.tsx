@@ -1,5 +1,9 @@
 import { FC } from 'react';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import { ReactComponent as HeartFilledIcon } from '@/assets/heart_filled.svg';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import { ReactComponent as HeartOutlinedIcon } from '@/assets/heart_outlined.svg';
 import Typography from '@/components/Typography';
 import {

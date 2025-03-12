@@ -7,7 +7,7 @@ export interface Comic {
   issueNumber: number;
   variantDescription: string;
   description: string;
-  modified: Date;
+  modified: Date | string;
   isbn: string;
   upc: string;
   diamondCode: string;
@@ -45,7 +45,7 @@ interface Url {
 
 interface ComicDate {
   type: string;
-  date: Date;
+  date: Date | string;
 }
 
 interface ComicPrice {

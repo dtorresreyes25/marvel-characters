@@ -24,6 +24,21 @@ export default defineConfig({
       },
     }),
   ],
+  build: {
+    minify: 'terser',
+    cssMinify: true,
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          zustand: ['zustand'],
+          minisearch: ['minisearch'],
+        },
+      },
+    },
+  },
   test: {
     globals: true,
     root: __dirname,

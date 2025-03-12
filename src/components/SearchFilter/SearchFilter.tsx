@@ -1,5 +1,7 @@
 import { useState, useEffect, ChangeEvent } from 'react';
 import { useDebouncedValue } from '@/hooks/useDebouncedValue.ts';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
 import { ReactComponent as SearchIcon } from '@/assets/search.svg';
 import {
   SearchBar,
