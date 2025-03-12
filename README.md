@@ -44,8 +44,6 @@ MiniSearch was chosen over larger alternatives (like Elasticsearch) due to:
 - Nested routes provide better **component organization**.
 - Dynamic parameters (`/character/:id`) enable **deep linking**.
 
----
-
 ## 🧪 Testing Strategy
 
 This project follows a **comprehensive testing strategy**:
@@ -89,8 +87,6 @@ This project follows a **comprehensive testing strategy**:
    });
    ```
 
----
-
 ## 🎯 Key Design Decisions
 
 ### ✅ **Why Zustand over Redux?**
@@ -107,8 +103,6 @@ This project follows a **comprehensive testing strategy**:
 - **Encapsulation**: Styles are tied directly to components.
 - **Dynamic styling**: Uses props to control styles (`styled.button<{ primary: boolean }>`).
 - **Removes unused CSS**: Eliminates unused styles via tree-shaking.
-
----
 
 ## 📂 Project Structure
 
@@ -136,8 +130,6 @@ marvel-characters/
 │-- README.md
 ```
 
----
-
 ## 🔧 Installation & Usage
 
 To set up the project, follow these steps:
@@ -158,5 +150,9 @@ npm install
 npm run dev
 ```
 
----
+## 🔗 Access the Application
+
+You can access the live application by visiting the following link:
+
+[https://marvel-characters-dayronrafael83.netlify.app/](https://marvel-characters-dayronrafael83.netlify.app/)
 
